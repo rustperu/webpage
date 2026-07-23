@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rust-peru-web
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - ./background.avif:/usr/share/nginx/html/background.avif:ro
+      - ./rust-peru.png:/usr/share/nginx/html/rust-peru.png:ro
+      - ./rust.png:/usr/share/nginx/html/rust.png:ro
+      - ./sitemap.xml:/usr/share/nginx/html/sitemap.xml:ro
+      - ./robots.txt:/usr/share/nginx/html/robots.txt:ro
+      - ./manifest.json:/usr/share/nginx/html/manifest.json:ro
+    networks:
+      - rust-peru-network
+
+networks:
+  rust-peru-network:
+    driver: bridge

@@ -1,0 +1,26 @@
+{
+  "name": "Rust Perú",
+  "short_name": "Rust PE",
+  "description": "Comunidad peruana de desarrolladores Rust",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#ef454a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "rust-peru.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "rust-peru.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "technology", "community"],
+  "lang": "es-PE"
+}
